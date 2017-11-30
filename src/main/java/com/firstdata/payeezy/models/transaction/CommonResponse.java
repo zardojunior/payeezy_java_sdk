@@ -38,4 +38,12 @@ public class CommonResponse {
 		this.status = status;
 	}
 
+	public Error getError() {
+		return error;
+	}
+
+	public void setError(Error error) {
+		this.error = error;
+	}
+
 }
