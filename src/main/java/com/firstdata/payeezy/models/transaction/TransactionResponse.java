@@ -49,8 +49,6 @@ public class TransactionResponse extends CommonResponse {
     private String exactResponseCode;
     @JsonProperty("gateway_message")
     private String exactMessage;
-    @JsonProperty("correlation_id")
-    private String corrID;
     
     @JsonProperty("split_tender_id")
     private String splitTenderId;
@@ -257,16 +255,6 @@ public class TransactionResponse extends CommonResponse {
     
     public void setExactMessage(String exactMessage) {
         this.exactMessage = exactMessage;
-    }
-
-    
-    public String getCorrID() {
-        return corrID;
-    }
-
-    
-    public void setCorrID(String corrID) {
-        this.corrID = corrID;
     }
 
 	public String getSplitTenderId() {
