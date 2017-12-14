@@ -93,7 +93,7 @@ public class PayeezyClient extends PayeezyAbstractClient {
             case POST:
                 return executePostRequest(URL,(String) payload,requestOptions);
             case PUT:
-                return executePostRequest(URL,(String) payload,requestOptions);
+                return executePutRequest(URL,(String) payload,requestOptions);
             default:
                 throw new Exception("Unsupported Request Method");
         }
