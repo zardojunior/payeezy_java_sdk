@@ -134,7 +134,7 @@ public class PayeezyClient extends PayeezyAbstractClient {
     protected PayeezyResponse executePutRequest(String uri, String payload, PayeezyRequestOptions requestOptions) throws Exception{
         HttpClient httpClient = payeezyHttpClient.getHttpClient();
         HttpPut httpPost = createPutConnection(uri,payload,requestOptions);
-        StringEntity entity = new StringEntity(payload);
+        StringEntity entity = new StringEntity(payload, "UTF-8");
         httpPost.setEntity(entity);
         // Create a custom response handler
         ResponseHandler<PayeezyResponse> responseHandler = new ResponseHandler<PayeezyResponse>() {
