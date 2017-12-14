@@ -110,7 +110,7 @@ public class PayeezyClient extends PayeezyAbstractClient {
     protected PayeezyResponse executePostRequest(String uri, String payload, PayeezyRequestOptions requestOptions) throws Exception{
         HttpClient httpClient = payeezyHttpClient.getHttpClient();
         HttpPost httpPost =  createPostConnection(uri,payload,requestOptions);
-        StringEntity entity = new StringEntity(payload);
+        StringEntity entity = new StringEntity(payload, "UTF-8");
         httpPost.setEntity(entity);
         // Create a custom response handler
         ResponseHandler<PayeezyResponse> responseHandler = new ResponseHandler<PayeezyResponse>() {
